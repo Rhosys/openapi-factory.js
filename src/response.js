@@ -17,7 +17,7 @@ class Response {
     }
 
     this.multiValueHeaders = Object.keys(populatedHeaders).reduce((agg, h) => {
-      agg[h] = Array.isArray(populatedHeaders[h]) ? populatedHeaders[h] : [populatedHeaders[h]].filter(v => v);
+      agg[h] = Array.isArray(populatedHeaders[h]) ? populatedHeaders[h] : [populatedHeaders[h]].filter(v => v !== '' && v !== null && v !== undefined).map(v => `${v}`);
       return agg;
     }, {});
   }

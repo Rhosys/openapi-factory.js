@@ -97,6 +97,27 @@ describe('response.js', () => {
       };
 
       yield {
+        name: 'Headers have non string values',
+        params: [{
+          headers: {
+            'Key': false,
+            'Content-Type': 17,
+            'X-Other': 0
+          }
+        }],
+        expectedResultObject: {
+          statusCode: 200,
+          isBase64Encoded: false,
+          multiValueHeaders: {
+            'Content-Type': ['17'],
+            'Key': ['false'],
+            'X-Other': ['0'],
+            'Access-Control-Allow-Origin': ['*']
+          }
+        }
+      };
+
+      yield {
         name: 'Remove allow origin header',
         params: [{
           headers: {
