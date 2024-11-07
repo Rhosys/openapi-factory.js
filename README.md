@@ -1,6 +1,17 @@
 # OpenAPI Factory (Javascript)
 
-[![npm version](https://badge.fury.io/js/openapi-factory.svg)](https://badge.fury.io/js/openapi-factory)
+This is an open source project managed by the [Authress Engineering team](https://authress.io).
+
+<p align="center">
+    <a href="https://authress.io" alt="Authress Engineering">
+      <img src="https://img.shields.io/static/v1?label=Authress+Engineering&message=OpenAPI%20Explorer&color=%23FBAF0B&logo=androidauto&logoColor=%23FBAF0B"></a>
+    <a href="./LICENSE" alt="apache 2.0 license">
+      <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg"></a>
+    <a href="https://badge.fury.io/js/openapi-factory" alt="npm version">
+        <img src="https://badge.fury.io/js/openapi-factory.svg"></a>
+    <a href="https://authress.io/community" alt="npm version">
+      <img src="https://img.shields.io/badge/community-Discord-purple.svg"></a>
+</p>
 
 Provides an simple event interceptor for AWS Lambda. Handles events tha come from API Gateway, SQS, EventBridge, and all other AWS services and routes them to appropriate lambda code. This enables you to have single AWS Lambda function for your whole service instead of needing tons of nano-ones to handle every route.
 
